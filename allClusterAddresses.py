@@ -13,7 +13,8 @@ input_files = [
     'l2pass/results/countClusterAddresses.csv',
     'l2telegraph/results/countClusterAddresses.csv',
     'merkly/results/countClusterAddresses.csv',
-    'gaszip/results/countClusterAddresses.csv'
+    'gaszip/results/countClusterAddresses.csv',
+    'l2marathon/results/countClusterAddresses.csv'
     # Add more file paths as needed
 ]
 

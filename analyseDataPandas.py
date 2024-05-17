@@ -3,7 +3,7 @@ import pandas as pd
 # Set the chunk size
 chunk_size = 1000000
 file_path = 'snapshot1_transactions.csv'
-output_file_path = 'btcb/data/btcb_txs.csv'
+output_file_path = 'l2marathon/data/l2marathon_txs.csv'
 
 # Open the CSV file in chunks
 for i, chunk in enumerate(pd.read_csv(file_path, chunksize=chunk_size)):
@@ -13,7 +13,7 @@ for i, chunk in enumerate(pd.read_csv(file_path, chunksize=chunk_size)):
     chunk = chunk.dropna(subset=['PROJECT'])
 
     # Search for rows with "fuse bridge" in the PROJECT column within the subset
-    fuse_bridge_rows = chunk[chunk['PROJECT'].str.contains('bitcoin', na=False, case=False)]
+    fuse_bridge_rows = chunk[chunk['PROJECT'].str.contains('l2marathon', na=False, case=False)]
 
     # Append the matching rows to the CSV file
     fuse_bridge_rows.to_csv(output_file_path, mode='a', index=False, header=not i)
