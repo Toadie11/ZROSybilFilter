@@ -25,18 +25,18 @@ This project aims to identify Sybil clusters within the LayerZero ecosystem. Usi
     - **EPS (Epsilon)**: Set to 100. This parameter defines the maximum distance between two samples for them to be considered as in the same neighborhood.
 
 3. **Cluster Identification**:
-    - Clustering was performed individually for each project's data.
+    - Clustering was performed individually for each project's data. Data was seperated by project and then by blockchain. Clustering identification was based on a small time window where the same wallets repeatedly interacted with a certain project on a certain blockchain.
 
 ### Results Aggregation
 
 1. **Result Merging**:
-    - Results from the 12 projects were combined to create a comprehensive list of wallets identified as part of a cluster.
+    - Results from the 12 projects and all their txs on the different blockchains were combined to create a comprehensive list of wallets identified as part of a cluster.
 
 2. **Cluster Count Calculation**:
     - For each wallet, the number of times it was categorized as part of a cluster was calculated.
 
 3. **Threshold Setting**:
-    - A threshold of 10 was established. Wallets flagged as part of a cluster at least 10 times were deemed Sybil clusters.
+    - A threshold of 20 was established. Wallets flagged as part of a cluster at least 20 times were deemed Sybil clusters. (being flagged once was already a clear sign of being a sybil, 20 times being flagged is extensive)
 
 ## Why This Method is Effective
 
@@ -47,10 +47,10 @@ This project aims to identify Sybil clusters within the LayerZero ecosystem. Usi
     - Setting a minimum cluster size and EPS ensures that only significant clusters are identified, reducing noise and false positives.
 
 3. **Comprehensive Aggregation**:
-    - Combining results across multiple projects and applying a threshold adds a layer of verification, ensuring that only consistently flagged wallets are marked as Sybil clusters.
+    - Combining results across multiple projects and blockchains and applying a threshold adds a layer of verification, ensuring that only consistently flagged wallets are marked as Sybil clusters.
 
 4. **Threshold Accuracy**:
-    - Setting a threshold at 10 for cluster occurrences ensures high confidence in the identification of Sybil clusters, balancing accuracy and safety.
+    - Setting a threshold at 20 for cluster occurrences ensures high confidence in the identification of Sybil clusters, balancing accuracy and safety.
 
 ## Conclusion
 
