@@ -3,21 +3,21 @@ import os
 
 # List of input CSV files
 input_files = [
-    'data2/arb_Clusters.csv',
-    'data2/bsc_Clusters.csv',
-    'data2/eth_Clusters.csv',
-    'data2/fuse_Clusters.csv',
-    'data2/gnosis_Clusters.csv',
-    'data2/matic_Clusters.csv',
-    'data2/op_Clusters.csv'
+    'data4/arb_Clusters.csv',
+    'data4/bsc_Clusters.csv',
+    'data4/eth_Clusters.csv',
+    'data4/fuse_Clusters.csv',
+    'data4/gnosis_Clusters.csv',
+    'data4/matic_Clusters.csv',
+    'data4/op_Clusters.csv'
     # Add more file paths as needed
 ]
 
 # Output file path
-output_file = 'data2/onlyClusterAddresses.csv'
+output_file = 'data4/onlyClusterAddresses.csv'
 
 # Create the output directory if it does not exist
-os.makedirs('data2', exist_ok=True)
+os.makedirs('data4', exist_ok=True)
 
 # Initialize an empty DataFrame to collect the results
 result_df = pd.DataFrame(columns=['SENDER_WALLET'])

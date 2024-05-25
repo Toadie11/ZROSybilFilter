@@ -2,14 +2,14 @@ import pandas as pd
 from sklearn.cluster import DBSCAN
 
 # Read the CSV file
-df = pd.read_csv("data/Polygon.csv")
+df = pd.read_csv("convertTime/arb_numeric_dates.csv")
 
 # Extract the numeric timestamps
 timestamps = df["SOURCE_TIMESTAMP_NUMERIC"].values.reshape(-1, 1)
 
 # Define DBSCAN parameters
-eps = 10  # maximum distance between two samples to be considered as neighbors (300 seconds = 5 minutes)
-min_samples = 5  # minimum number of samples in a cluster
+eps = 1  # maximum distance between two samples to be considered as neighbors (300 seconds = 5 minutes)
+min_samples = 10  # minimum number of samples in a cluster
 
 # Initialize DBSCAN
 dbscan = DBSCAN(eps=eps, min_samples=min_samples)
@@ -33,4 +33,4 @@ sorted_clusters = clustered_df.sort_values(by="Cluster_Label", ascending=False)
 # sorted_clusters = df.sort_values(by='Cluster_Label', ascending=False)
 
 # Save the sorted DataFrame to a new CSV file
-sorted_clusters.to_csv("data4/Polygon_Clusters.csv", index=False)
+sorted_clusters.to_csv("data3/op_Clusters.csv", index=False)

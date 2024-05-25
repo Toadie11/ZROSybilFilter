@@ -30,8 +30,8 @@ for input_file in input_files:
         timestamps = df['SOURCE_TIMESTAMP_NUMERIC'].values.reshape(-1, 1)
         
         # Define DBSCAN parameters
-        eps = 100  # maximum distance between two samples to be considered as neighbors (300 seconds = 5 minutes)
-        min_samples = 20  # minimum number of samples in a cluster
+        eps = 1  # maximum distance between two samples to be considered as neighbors (300 seconds = 5 minutes)
+        min_samples = 10  # minimum number of samples in a cluster
         
         # Initialize DBSCAN
         dbscan = DBSCAN(eps=eps, min_samples=min_samples)

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the original CSV file
-df_original = pd.read_csv('data/fuse_bridge_numeric_dates.csv')
+df_original = pd.read_csv('data/aptosBridge_numeric_dates.csv')
 
 # Calculate the number of transactions for each sender wallet
 txs_count = df_original['SENDER_WALLET'].value_counts()
