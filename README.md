@@ -7,7 +7,7 @@ Detailed Methodology & Walkthrough
 Methodology:
 
 1. **Data Preparation:**
-   - Initially, the LayerZero data was organized into separate datasets per project, including Angle, AptosBridge, BtcB, Core, Gaszip, Harmony, Kingdom, L2marathon, L2pass, and L2telegraph.
+   - Initially, the LayerZero data was organized into separate datasets per project, including Angle, AptosBridge, BtcB, Core, Gaszip, Harmony, Kingdom, L2marathon, L2pass, and L2telegraph. It is possible to add data from more protocols to filter out additional sybils.
    - Each project's data was then further divided based on the blockchain source.
 
 2. **Timestamp Conversion:**
@@ -63,7 +63,7 @@ Walkthrough:
 
 You can find the code for this project on my GitHub repository https://github.com/Toadie11/ZROSybilFilter. While I haven't uploaded the CSV files directly, I have them all, including the intermediate steps/lists and the final list. If you need access to these files for verification or further analysis, feel free to reach out. The data is organized by clusters per protocol per source blockchain, along with a final list where they were cross-referenced for accuracy. This structure ensures transparency and allows for easy replication of the analysis.
 
-I have taken a very conservative approach in my analysis to ensure accuracy. I hope this method meets your expectations. If you would prefer a less conservative approach or even more stringent criteria, please let me know. I can easily adjust the parameters to suit your needs.
+I have taken a very conservative approach in my analysis to ensure accuracy. I hope this method meets your expectations. If you would prefer a less conservative approach or even more stringent criteria, please let me know. I can easily adjust the parameters to suit your needs. It is also possible to add data from more protocols to filter out additional sybils. (Right now limited to Angle, AptosBridge, BtcB, Core, Gaszip, Harmony, Kingdom, L2marathon, L2pass, and L2telegraph)
 
 Reward Address (If Eligible)
 0x14a61fD089E24732dEe4bBAC37fD8B5F28CD23a0
