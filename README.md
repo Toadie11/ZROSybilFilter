@@ -21,6 +21,7 @@ Methodology:
 
 4. **Cluster Refinement:**
    - Duplicate addresses within clusters were removed to ensure accuracy.
+   - Addresses that were already on the initial list from LayerZero have been removed.
    - Clusters smaller than 5 were eliminated from the analysis to minimize false positives.
 
 5. **Sybil Detection:**
@@ -50,13 +51,14 @@ Walkthrough:
    - Using sklearn, clusters of suspicious activities were identified based on predefined parameters.
 
 4. **Refinement and Sybil Detection:**
+   - Addresses that were already on the initial list from LayerZero have been removed.
    - Duplicate addresses were removed, and clusters smaller than 5 were discarded to refine the analysis.
    - Aggregating addresses and applying stringent criteria facilitated the detection of potential Sybil wallets.
 
-5. **Exclusion of Certain Protocols:**
+6. **Exclusion of Certain Protocols:**
    - Protocols with high transaction volumes were excluded to prevent false positives.
 
-6. **Final Evaluation:**
+7. **Final Evaluation:**
    - The methodology ensured thorough scrutiny of wallet activity, focusing on behaviors indicative of automated bot activity, thus minimizing the risk of false positives.
 
 You can find the code for this project on my GitHub repository https://github.com/Toadie11/ZROSybilFilter. While I haven't uploaded the CSV files directly, I have them all, including the intermediate steps/lists and the final list. If you need access to these files for verification or further analysis, feel free to reach out. The data is organized by clusters per protocol per source blockchain, along with a final list where they were cross-referenced for accuracy. This structure ensures transparency and allows for easy replication of the analysis.
