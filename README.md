@@ -26,7 +26,7 @@ Methodology:
 
 5. **Sybil Detection:**
    - To further reduce false positives, addresses across all datasets were aggregated.
-   - Addresses appearing more than twice across all datasets were flagged as potential Sybil wallets.
+   - Addresses appearing more than three times across all datasets were flagged as potential Sybil wallets.
 
 6. **Exclusion Criteria:**
    - Certain protocols, namely Merkly and Stargate, were excluded from the analysis. This decision was based on the high volume of transactions on these protocols, which could potentially lead to false positives when filtering transactions within the same blocktime, protocol, and source chain.
